@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>Abria — Interactive Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <button class="brand" data-go="home"><span class="mark">▶</span><span>Abria</span></button>
+      <div class="top-actions">
+        <button class="pill" id="modeBtn">Demo</button>
+        <button class="icon-btn" id="menuBtn" aria-label="Module">☰</button>
+      </div>
+    </header>
+
+    <section class="stage" id="stage">
+      <div class="phone" id="phone">
+        <img id="screenImage" src="assets/home.webp" alt="Abria screen" draggable="false" />
+        <div id="hotspots" class="hotspots" aria-hidden="false"></div>
+      </div>
+      <div class="landscape-frame hidden" id="landscapeFrame">
+        <img id="landscapeImage" alt="Abria module" draggable="false" />
+        <button class="back-fab" id="backFab">← Zurück</button>
+      </div>
+    </section>
+
+    <nav class="dock" id="dock">
+      <button data-go="home" class="active"><span>⌂</span><small>Home</small></button>
+      <button data-go="record"><span>▣</span><small>Lesen</small></button>
+      <button data-go="map"><span>◎</span><small>Map</small></button>
+      <button data-go="lessons"><span>▤</span><small>Lessons</small></button>
+      <button data-go="profile"><span>◯</span><small>Profil</small></button>
+    </nav>
+  </main>
+
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-card">
+      <div class="drawer-head"><strong>Abria Module</strong><button id="closeDrawer">×</button></div>
+      <div class="module-grid">
+        <button data-go="login">Login</button>
+        <button data-go="language">Sprachauswahl</button>
+        <button data-go="home">Teleprompter</button>
+        <button data-go="record">Record</button>
+        <button data-go="upload">PDF / Upload</button>
+        <button data-go="lessons">Lessons</button>
+        <button data-go="profile">Profil</button>
+        <button data-go="map">World Map</button>
+        <button data-go="friends-map">Friends Map</button>
+        <button data-go="party-map">Party Map</button>
+        <button data-go="orbit-chat">Orbit Chat</button>
+        <button data-go="tv">Abria TV</button>
+        <button data-go="talent">Talent Mode</button>
+        <button data-go="wonders">Wonders</button>
+      </div>
+      <p class="drawer-note">Clickable Visual Prototype — Screens basieren auf den Abria-Mockups aus dem Chat.</p>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
