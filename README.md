@@ -1,38 +1,45 @@
-# Abria — Interactive Visual Demo
+# Abria — Interactive Demo
 
-Clickable prototype built from the Abria UI screens developed in the ChatGPT conversation.
+Interactive static prototype of the Abria language-learning ecosystem.
 
-## What is included
+## Included modules
 
 - Login
 - Language selection
-- Core teleprompter / Speak UI
-- Record mode
-- PDF / own-text upload concept
+- Core teleprompter / Speak mode
+- Speed controls
+- Own text / PDF concept
 - Lessons split UI
 - Profile
 - World Language Map
 - Friends Map
-- Party Map
+- Party Study Groups
 - Orbit Chat
-- Abria TV channels
+- Abria TV language channels
 - Talent Mode
-- Wonders Collection
+- Wonders Collection / Tower of Babel progression
 
 ## Run locally
 
-No build step or dependencies.
+No build step and no dependencies.
 
 ```bash
 python3 -m http.server 8080
 ```
 
-Then open `http://localhost:8080`.
+Open `http://localhost:8080`.
 
 ## GitHub Pages
 
-This project is static and can be published directly with GitHub Pages from the repository root.
+The demo is static and can be published directly from the repository root:
 
-## Prototype strategy
+1. Open **Settings → Pages**
+2. Under **Build and deployment**, choose **Deploy from a branch**
+3. Select **main** and **/(root)**
+4. Save
 
-This first demo deliberately uses the approved mockup images as visual source screens so the prototype stays visually close to the artwork. Navigation and module switching are interactive. The next engineering phase can replace each image screen with native HTML/React components while keeping the same design system.
+## Current prototype status
+
+This repository is the first native interactive build: the screens are recreated in HTML/CSS/JavaScript rather than being flat screenshots. It follows the Abria black/gold visual system and implements the major navigation and interactions.
+
+Next engineering steps can add camera/microphone recording, real teleprompter scrolling, authentication, speech analysis, file parsing, real-time groups, persistent XP, and backend services.
